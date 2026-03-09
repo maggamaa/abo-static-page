@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sámi transkripšuvdna ja jorgaleapmi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700\&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .pulse {
+            animation: pulse-red 2s infinite;
+        }
+
+        @keyframes pulse-red {
+            0% {
+                box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+            }
+        }
+
+        input[type=range] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            background: #e5e7eb;
+            height: 0.25rem;
+            border-radius: 1rem;
+        }
+
+        input[type=range]::-moz-range-track {
+            background: #e5e7eb;
+            height: 0.25rem;
+            border-radius: 1rem;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            margin-top: -6px;
+            background-color: #e1bc48;
+            height: 1.25rem;
+            width: 1.25rem;
+            border-radius: 9999px;
+        }
+
+        input[type=range]::-moz-range-thumb {
+            border: none;
+            border-radius: 9999px;
+            background-color: #e1bc48;
+            height: 1.25rem;
+            width: 1.25rem;
+        }
+
+        .dark input[type=range]::-webkit-slider-runnable-track {
+            background: #4b5563;
+        }
+
+        .dark input[type=range]::-moz-range-track {
+            background: #4b5563;
+        }
+
+        .placeholder-dots::after {
+            content: ' .';
+            animation: dots 1.4s linear infinite;
+        }
+
+        @keyframes dots {
+
+            0%,
+            20% {
+                content: ' .';
+            }
+
+            40% {
+                content: ' ..';
+            }
+
+            60% {
+                content: ' ...';
+            }
+
+            80%,
+            100% {
+                content: '';
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col">
+
+    <header class="w-full shadow-md bg-[#e1bc48] dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex items-center">
+            <img src="./static/images/sa-logo-nordsamisk.png" alt="Sámi Allaskuvla logo" width="221px" class="me-2">
+        </div>
+    </header>
+    <main class="flex-grow flex items-center justify-center p-4">
+
+        <div class="w-full max-w-4xl bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 md:p-8">
+
+            <div class="space-y-3">
+                <div class="leading-relaxed">
+                    <h2 class="font-semibold text-2xl">Sámi:</h2>
+                    <p>Sámegiela live-transkriberen ja jorgaleapmi boahta duorastaga, njukčamánu 12. beaivve. Mii
+                        gulahallat!</p>
+                    <h2 class="font-semibold text-2xl">Norsk:</h2>
+                    <p>Live-transkripsjon og oversettelse for samisk kommer torsdag 12. mars. Vi snakkes!</p>
+                    <h2 class="font-semibold text-2xl">Suomi:</h2>
+                    <p>Saamen kielen live-tekstitys ja kääntäminen tulossa torstaina 12. maaliskuuta. Kuulemiin!</p>
+                    <h2 class="font-semibold text-2xl">English:</h2>
+                    <p>Real-time Sámi transcription and translation. Launching Thursday, March 12. Stay tuned!</p>
+                </div>
+            </div>
+    </main>
+
+    <footer class="w-full mt-10 bg-[#e1bc48] dark:bg-gray-800 text-gray-900 dark:text-gray-100">
+
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <a href="https://samas.no" target="_blank" rel="noopener">
+                <img src="./static/images/sa-logo-nordsamisk.png" alt="Sámi Allaskuvla logo" width="221px" class="me-2">
+            </a>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 py-6 grid gap-8 md:grid-cols-3 text-lg leading-[1.8]">
+
+            <div class="flex items-start gap-3">
+                <img src="./static/icons/icon_pin.svg" class="w-5 h-5 mt-0.5" alt="">
+                <div>
+                    <div>Hánnoluohkká 45</div>
+                    <div>NO-9520 Guovdageaidnu</div>
+                    <div>Org.nr: 971 519 363</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pb-2 text-base">
+            <img src="./static/images/building-schema.svg">
+            <em>© 2026 Sámi AI Lab</em>.
+        </div>
+    </footer>
+</body>
+
+</html>
